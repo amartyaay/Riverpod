@@ -82,13 +82,13 @@ class HomePage extends ConsumerWidget {
       body: Column(
         children: [
           currentWeather.when(
-            data: ((data) => Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Text(
-                    data,
-                    style: emojiStyle,
-                  ),
-                )),
+            data: (data) => Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                data,
+                style: emojiStyle,
+              ),
+            ),
             error: (error, stackTrace) => Text(error.toString()),
             loading: () => const Padding(
               padding: EdgeInsets.all(20),
