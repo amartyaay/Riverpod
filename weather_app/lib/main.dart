@@ -50,7 +50,7 @@ Future<WeatherEmoji> getWeather(City city) {
 }
 
 //StateProvider hold STATE which can be changed from OUTSIDE WORLD
-//UI write to this and Write to This
+//UI write to this and Reead from This
 final currentCityProvider = StateProvider<City?>((ref) {
   return null;
 });
