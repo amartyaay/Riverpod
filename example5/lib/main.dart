@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:uuid/uuid.dart';
@@ -57,6 +59,41 @@ class Person {
   @override
   String toString() => 'Person(name: $name,age: $age,uuid: $uuid)';
 }
+
+//Change Notifier
+class DataModel extends ChangeNotifier {
+  final List<Person> _person = [];
+  int get count => _person.length;
+  UnmodifiableListView<Person> get people => UnmodifiableListView(_person);
+
+  //add people
+  void add(Person person) {
+    _person.add(person);
+    notifyListeners();
+  }
+
+  void remove(Person person) {
+    _person.remove(person);
+    notifyListeners();
+  }
+
+  void update(Person updatedPerson) {
+    //modified bool operator compare only uuid
+    final index = _person.indexOf(updatedPerson);
+    final oldPerson = _person[index];
+    if (oldPerson.age != updatedPerson.age || oldPerson.name != updatedPerson.name) {
+      _person[index] = oldPerson.updated(
+        updatedPerson.name,
+        updatedPerson.age,
+      );
+      notifyListeners();
+    }
+  }
+}
+
+final peopleProvider = ChangeNotifierProvider<DataModel>((ref) {
+  return DataModel();
+});
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
