@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "564747829103",
+    "project_id": "insta-riverpod-clone-311222",
+    "storage_bucket": "insta-riverpod-clone-311222.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564747829103:android:8e179b55ff4ce49cb0b29a",
+        "android_client_info": {
+          "package_name": "amartyaay.com.insta_riverpod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564747829103-n5hbhvi2jdaen2ee6lje9msevndn5git.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9kwtnXU761tE3QYFLcI8MC64dvMv2BBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564747829103-n5hbhvi2jdaen2ee6lje9msevndn5git.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
